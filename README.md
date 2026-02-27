@@ -119,5 +119,3 @@ Tampilan tetap rapi di:
 - Desktop
 - Tablet
 - Mobile
-
----
