@@ -101,16 +101,9 @@ Yang mengatur:
 - Custom progress bar
 - Styling navbar
 
----
+## Teknologi yang Digunakan
 
-## Responsive Design
-
-Website responsive karena menggunakan:
-- Bootstrap Grid System
-- Breakpoints (`col-md-`)
-- Flexbox utilities
-
-Tampilan tetap rapi di:
-- Desktop
-- Tablet
-- Mobile
+Teknologi yang digunakan pada pembuatan website ini adalah:
+- HTML
+- CSS
+- Bootstrap 5
