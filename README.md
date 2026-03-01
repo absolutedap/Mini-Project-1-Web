@@ -1,22 +1,13 @@
-# 🌐 Portfolio Website - Daffa
+# Portfolio Website
 
 Website portofolio statis yang dibuat menggunakan HTML, CSS, dan Bootstrap 5.  
 Website ini menampilkan informasi pribadi, skill, pengalaman, dan sertifikat dalam tampilan modern full dark theme dengan gradient ungu-hitam.
 
 ---
 
-## 📌 Teknologi yang Digunakan
+## 1. Section Home (Hero Section)
 
-- HTML5
-- CSS3
-- Bootstrap 5 (CDN)
-- Google Fonts (Poppins)
-
-Website bersifat statis (tidak menggunakan database atau backend).
-
----
-
-## 🏠 1. Section Home (Hero Section)
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/6814b25e-7f94-4f8b-a385-0e75470f7efd" />
 
 ### Tampilan
 Menampilkan:
@@ -37,7 +28,9 @@ Menampilkan:
 
 ---
 
-## 👤 2. Section About Me
+## 2. Section About Me
+
+<img width="1918" height="1026" alt="image" src="https://github.com/user-attachments/assets/a70d9eb3-67b1-4152-b302-201916f843ee" />
 
 ### Tampilan
 Menampilkan:
@@ -57,7 +50,9 @@ Menampilkan:
 
 ---
 
-## 📜 3. Section Certificates
+## 3. Section Certificates
+
+<img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/f74a6dbc-6dda-4618-8f91-f6dc5716a599" />
 
 ### Tampilan
 Menampilkan:
@@ -93,7 +88,7 @@ Menampilkan:
 
 ---
 
-## 🎨 Styling
+## Styling
 
 Semua styling tambahan ditulis pada file:
 style.css
@@ -108,7 +103,7 @@ Yang mengatur:
 
 ---
 
-## 📱 Responsive Design
+## Responsive Design
 
 Website responsive karena menggunakan:
 - Bootstrap Grid System
