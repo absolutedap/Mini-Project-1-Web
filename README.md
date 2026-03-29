@@ -1,109 +1,161 @@
 # Portfolio Website
 
-Website portofolio statis yang dibuat menggunakan HTML, CSS, dan Bootstrap 5.  
-Website ini menampilkan informasi pribadi, skill, pengalaman, dan sertifikat dalam tampilan modern full dark theme dengan gradient ungu-hitam.
+Website portfolio dinamis yang dibuat menggunakan PHP, MySQL, CSS, dan Bootstrap 5.
+Website ini menampilkan informasi profil, pengalaman, skill, dan sertifikat dengan tampilan modern menggunakan tema dark gradient ungu-hitam.
 
 ---
 
-## 1. Section Home (Hero Section)
-
-<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/6814b25e-7f94-4f8b-a385-0e75470f7efd" />
+## 1. Section Hero (Profile)
 
 ### Tampilan
+
+<img width="1919" height="1035" alt="image" src="https://github.com/user-attachments/assets/72e08ae2-11c4-4343-bb6b-5418402aa357" />
+
 Menampilkan:
-- Foto profil
-- Nama
-- Deskripsi singkat
-- Tombol navigasi ke About Me
+
+* Foto profil
+* Nama
+* Deskripsi singkat
 
 ### Penjelasan Code
-- Menggunakan `<section id="home">`
-- Layout menggunakan Bootstrap class:
-  - `container`
-  - `d-flex`
-  - `align-items-center`
-  - `text-center`
-- Gambar menggunakan class custom `.profile-img`
-- Background menggunakan gradient dari CSS
+
+* Menggunakan `<section class="hero">`
+* Data diambil dari database tabel **profile**
+* Ditampilkan menggunakan PHP:
+
+  ```php
+  <?= htmlspecialchars($profile['name']) ?>
+  ```
+* Layout menggunakan Bootstrap:
+
+  * `container`
+  * `text-center`
+* Styling menggunakan CSS custom:
+
+  * `.hero`
+  * `.profile-img`
 
 ---
 
-## 2. Section About Me
-
-<img width="1918" height="1026" alt="image" src="https://github.com/user-attachments/assets/a70d9eb3-67b1-4152-b302-201916f843ee" />
+## 2. Section Experience
 
 ### Tampilan
+
+<img width="1919" height="1032" alt="image" src="https://github.com/user-attachments/assets/32f8eacd-27ba-4de2-bee6-aa7450e303e3" />
+
 Menampilkan:
-- Deskripsi diri
-- Pengalaman dalam bentuk list
-- Skill dengan progress bar
+
+* Daftar pengalaman
+* Judul pengalaman
+* Deskripsi pengalaman
+* Ditampilkan dalam bentuk card
 
 ### Penjelasan Code
-- Menggunakan `<section id="about">`
-- Layout menggunakan Bootstrap Grid System:
-  - `row`
-  - `col-md-6`
-- Progress bar menggunakan komponen Bootstrap:
-  - `progress`
-  - `progress-bar`
-- Styling warna skill menggunakan class custom `.skill-bar`
+
+* Menggunakan `<section class="section">`
+* Data diambil dari tabel **experiences**
+* Menggunakan looping PHP:
+
+  ```php
+  foreach($experiences as $exp)
+  ```
+* Layout menggunakan Bootstrap Grid:
+
+  * `row`
+  * `col-md-4`
+* Card menggunakan class custom:
+
+  * `.card-dark`
 
 ---
 
-## 3. Section Certificates
-
-<img width="1917" height="1028" alt="image" src="https://github.com/user-attachments/assets/f74a6dbc-6dda-4618-8f91-f6dc5716a599" />
+## 3. Section Skills
 
 ### Tampilan
+
+<img width="1919" height="1026" alt="image" src="https://github.com/user-attachments/assets/099c6069-2915-4ea8-8713-fa0a87b0ad06" />
+
 Menampilkan:
-- Daftar sertifikat dalam bentuk card
-- Layout grid responsif (3 kolom di desktop)
+
+* Nama skill
+* Persentase kemampuan
+* Progress bar visual
 
 ### Penjelasan Code
-- Menggunakan `<section id="certificates">`
-- Layout grid menggunakan:
-  - `row`
-  - `col-md-4`
-- Card menggunakan komponen Bootstrap:
-  - `card`
-  - `card-body`
-  - `card-img-top`
-- Ditambahkan efek hover menggunakan CSS
+
+* Menggunakan `<section class="section-dark">`
+* Data diambil dari tabel **skills**
+* Menggunakan looping PHP:
+
+  ```php
+  foreach($skills as $skill)
+  ```
+* Progress bar dibuat custom (tidak menggunakan Bootstrap):
+
+  * `.skill-bar`
+  * `.skill-fill`
+* Lebar progress diatur dari database:
+
+  ```php
+  style="width: <?= $skill['percent'] ?>%"
+  ```
 
 ---
 
-## 🧭 4. Navbar
+## 4. Section Certificates
 
 ### Tampilan
-- Navbar fixed di atas
-- Navigasi ke setiap section
-- Responsive (collapse di mobile)
+
+<img width="1911" height="1024" alt="image" src="https://github.com/user-attachments/assets/f131ce89-77a8-46c1-ac03-f01b3d971f8b" />
+
+Menampilkan:
+
+* Gambar sertifikat
+* Judul sertifikat
+* Efek hover zoom
 
 ### Penjelasan Code
-- Menggunakan komponen `navbar` dari Bootstrap
-- `navbar-expand-lg`
-- `navbar-dark`
-- `fixed-top`
-- Menggunakan `collapse` untuk responsive menu
+
+* Menggunakan `<section class="section">`
+* Data diambil dari tabel **certificates**
+* Menggunakan looping PHP:
+
+  ```php
+  foreach($certificates as $cert)
+  ```
+* Layout menggunakan Bootstrap Grid:
+
+  * `row`
+  * `col-md-4`
+* Styling menggunakan:
+
+  * `.cert-img`
+* Efek hover menggunakan transform CSS
 
 ---
 
 ## Styling
 
-Semua styling tambahan ditulis pada file:
-style.css
+Semua styling ditulis pada file:
+
+```
+css/style.css
+```
 
 Yang mengatur:
-- Gradient background ungu-hitam
-- Warna teks
-- Hover effect card
-- Custom button
-- Custom progress bar
-- Styling navbar
+
+* Background gradient ungu-hitam
+* Warna teks (dark mode)
+* Card modern (glass/dark effect)
+* Progress bar custom
+* Hover effect pada card dan gambar
+
+---
 
 ## Teknologi yang Digunakan
 
-Teknologi yang digunakan pada pembuatan website ini adalah:
-- HTML
-- CSS
-- Bootstrap 5
+* HTML
+* CSS
+* PHP
+* MySQL
+* Bootstrap 5
