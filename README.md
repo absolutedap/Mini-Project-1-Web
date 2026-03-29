@@ -5,6 +5,19 @@ Website ini menampilkan informasi pribadi, skill, pengalaman, dan sertifikat dal
 
 ---
 
+## Jalankan di Laragon
+1. Taruh folder project ini di `D:\laragon\www\portfolio`
+2. Jalankan Laragon lalu klik `Start All`
+3. Buka salah satu URL ini:
+   - `http://localhost/portfolio/` (paling aman)
+   - `http://portfolio.test/` (kalau Auto Virtual Host Laragon aktif & hosts sudah ter-update)
+
+### Database (opsional)
+Website bisa jalan tanpa database (akan pakai data fallback). Kalau mau pakai database:
+- Buat database `portfolio_db`
+- Import `database.sql`
+- Pastikan MySQL di Laragon menyala
+
 ## 📌 Teknologi yang Digunakan
 
 - HTML5
